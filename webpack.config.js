@@ -30,7 +30,11 @@ module.exports = {
       patterns: [
         { from: 'src/assets/images', to: 'images' },
         { from: '.nojekyll', to: '.nojekyll', noErrorOnMissing: true },
-        { from: 'CNAME', to: 'CNAME', noErrorOnMissing: true }
+        { 
+          from: 'CNAME', 
+          to: '[name][ext]',
+          noErrorOnMissing: true 
+        }
       ],
     }),
   ],
