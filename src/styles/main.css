@@ -8,8 +8,67 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #fff;
 }
 
 #app {
     min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo-main {
+    font-size: 8rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #333;
+    margin-bottom: -20px;
+    font-family: 'Times New Roman', serif;
+}
+
+.logo-sub {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: #666;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* Responsive Design for Logo */
+@media (max-width: 768px) {
+    .header {
+        padding: 40px 20px;
+    }
+    
+    .logo-main {
+        font-size: 5rem;
+        margin-bottom: -15px;
+    }
+    
+    .logo-sub {
+        font-size: 1rem;
+        letter-spacing: 0.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-main {
+        font-size: 4rem;
+        margin-bottom: -10px;
+    }
+    
+    .logo-sub {
+        font-size: 0.9rem;
+        letter-spacing: 0.15em;
+    }
 }
