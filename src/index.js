@@ -25,14 +25,30 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add active class to clicked thumbnail
         thumbnail.classList.add('active');
         
-        // Update featured image
+        // Get the new image source
         const newImageSrc = thumbnail.getAttribute('data-image');
-        featuredImage.src = newImageSrc;
         
-        // Smooth transition effect
+        // Only fade if it's a different image
+        if (featuredImage.src.includes(newImageSrc.split('/').pop())) {
+            return; // Same image, no need to transition
+        }
+        
+        // Smooth crossfade transition
         featuredImage.style.opacity = '0';
+        
+        // Wait for fade out to complete, then change source and fade in
         setTimeout(() => {
-            featuredImage.style.opacity = '1';
+            featuredImage.src = newImageSrc;
+            
+            // Wait a tiny bit for the new image to load, then fade in
+            featuredImage.onload = () => {
+                featuredImage.style.opacity = '1';
+            };
+            
+            // Fallback in case onload doesn't fire
+            setTimeout(() => {
+                featuredImage.style.opacity = '1';
+            }, 50);
         }, 150);
     }
 
