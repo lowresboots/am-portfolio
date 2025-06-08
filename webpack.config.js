@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     clean: true,
-    publicPath: process.env.NODE_ENV === 'production' ? '/am-portfolio/' : '/',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -29,7 +29,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/assets/images', to: 'images' },
-        { from: '.nojekyll', to: '.nojekyll', noErrorOnMissing: true }
+        { from: '.nojekyll', to: '.nojekyll', noErrorOnMissing: true },
+        { from: 'CNAME', to: 'CNAME', noErrorOnMissing: true }
       ],
     }),
   ],
