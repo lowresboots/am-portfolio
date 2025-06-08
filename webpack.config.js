@@ -29,12 +29,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/assets/images', to: 'images' },
-        { from: '.nojekyll', to: '.nojekyll', noErrorOnMissing: true },
-        { 
-          from: 'CNAME', 
-          to: '[name][ext]',
-          noErrorOnMissing: true 
-        }
+        { from: '.nojekyll', to: '.nojekyll', noErrorOnMissing: true }
       ],
     }),
   ],
