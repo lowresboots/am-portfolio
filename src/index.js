@@ -24,6 +24,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 150);
         });
     });
+
+    // Contact form functionality
+    const contactForm = document.getElementById('contact-form');
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        
+        // Create mailto link
+        const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+        const mailtoLink = `mailto:martinez.l.amy@gmail.com?subject=${encodeURIComponent(subject)}&body=${emailBody}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+    });
 });
 
 console.log('AM Portfolio loaded successfully');

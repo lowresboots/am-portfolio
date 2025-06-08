@@ -156,6 +156,87 @@ body {
     letter-spacing: 0.01em;
 }
 
+/* Contact Section Styles */
+.contact {
+    background-color: #fff;
+    padding: 80px 20px;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-intro {
+    margin-bottom: 40px;
+}
+
+.contact-text {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+    background-color: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #333;
+    background-color: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
@@ -202,6 +283,29 @@ body {
         line-height: 1.7;
         max-width: 100%;
     }
+
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .contact-container {
+        max-width: 100%;
+    }
+
+    .contact-text {
+        font-size: 1.1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .submit-btn {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -231,5 +335,24 @@ body {
     .about-text {
         font-size: 0.95rem;
         line-height: 1.6;
+    }
+
+    .contact {
+        padding: 40px 15px;
+    }
+
+    .contact-text {
+        font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
